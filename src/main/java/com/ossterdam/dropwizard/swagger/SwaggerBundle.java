@@ -57,14 +57,14 @@ public abstract class SwaggerBundle<T extends Configuration> implements Configur
         new ConfigurationHelper(configuration, swaggerBundleConfiguration);
     new AssetsBundle(
             "/swagger-static", configurationHelper.getSwaggerUriPath(), null, "swagger-assets")
-        .run(environment);
+        .run(configuration, environment);
 
     new AssetsBundle(
             "/swagger-static/oauth2-redirect.html",
             configurationHelper.getOAuth2RedirectUriPath(),
             null,
             "swagger-oauth2-connect")
-        .run(environment);
+        .run(configuration, environment);
 
     final SwaggerConfiguration oasConfiguration = swaggerBundleConfiguration.build();
     new JaxrsOpenApiContextBuilder().openApiConfiguration(oasConfiguration).buildContext(true);

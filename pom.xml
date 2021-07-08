@@ -22,7 +22,7 @@
 
     <groupId>com.ossterdam</groupId>
     <artifactId>dropwizard-swagger-v3</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>2.0.23-1-SNAPSHOT</version>
 
     <name>Dropwizard Swagger 2.x support</name>
     <description>A simple way to document your REST APIs in Dropwizard using Swagger 2.x (OpenApi 3.0 specification)</description>
@@ -38,7 +38,6 @@
     <inceptionYear>2019</inceptionYear>
 
     <properties>
-        <maven.compiler.release>8</maven.compiler.release>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
@@ -46,7 +45,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <file.encoding>UTF-8</file.encoding>
 
-        <dropwizard.version>1.3.10</dropwizard.version>
+        <dropwizard.version>2.0.23</dropwizard.version>
         <google-java-format.version>1.7</google-java-format.version>
         <jmh.version>1.21</jmh.version>
         <asm.version>7.1</asm.version>
@@ -92,6 +91,7 @@
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-multipart</artifactId>
+            <version>3.0.2</version>
         </dependency>
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
@@ -316,24 +316,6 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <additionalOptions>
-                        <option>-html5</option>
-                    </additionalOptions>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
